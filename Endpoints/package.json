@@ -1,0 +1,30 @@
+{
+  "dependencies": {
+    "express": "^5.1.0",
+    "mysql": "^2.18.1",
+    "mysql2": "^3.14.1"
+  },
+  "name": "ejercicio---expressjs-y-mysql",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maiderspb/Ejercicio---EXPRESSJS-y-MySQL.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maiderspb/Ejercicio---EXPRESSJS-y-MySQL/issues"
+  },
+  "homepage": "https://github.com/maiderspb/Ejercicio---EXPRESSJS-y-MySQL#readme",
+  "description": "",
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
