@@ -1,4 +1,4 @@
-# 🛠️ Proyecto Express + MySQL CRUD 
+# 🛠️ Proyecto Express + MySQL CRUD
 
 Este proyecto tiene como objetivo desarrollar una API RESTful utilizando Node.js, Express.js y MySQL, aplicando el patrón de diseño MVC y prácticas de desarrollo backend modernas.
 
@@ -18,22 +18,34 @@ Usar herramientas como Postman para probar endpoints
 
 Versionar correctamente el código con Git y GitHub
 
-
 📁 Estructura del proyecto (MVC)
 
 /config
-  ├── database.js
-  └── database.example.js
+
+├── database.js
+
+└── database.example.js
+
 /controllers
-  ├── ProductController.js
-  ├── CategoryController.js
-  ├── UserController.js
-  └── OrderController.js
+
+├── ProductController.js
+
+├── CategoryController.js
+
+├── UserController.js
+
+└── OrderController.js
+
 /routes
-  ├── products.js
-  ├── categories.js
-  ├── users.js
-  └── orders.js
+
+├── products.js
+
+├── categories.js
+
+├── users.js
+
+└── orders.js
+
 index.js
 
 ## Endpoint
@@ -126,8 +138,6 @@ Postman
 
 Git & GitHub
 
-
 📌 Autor
 
 Maider San Pedro Barquín
-Desarrollado como parte de una práctica para aprender y consolidar conocimientos de backend con Node.js, Express y MySQL.
