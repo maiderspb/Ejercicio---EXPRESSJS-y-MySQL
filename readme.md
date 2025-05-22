@@ -1,4 +1,40 @@
-# Ejercicio - EXPRESSJS y MySQL
+# 🛠️ Proyecto Express + MySQL CRUD 
+
+Este proyecto tiene como objetivo desarrollar una API RESTful utilizando Node.js, Express.js y MySQL, aplicando el patrón de diseño MVC y prácticas de desarrollo backend modernas.
+
+🎯 Objetivos principales
+
+Manejar Node.js y NPM
+
+Comprender la arquitectura de Express.js
+
+Aprender a utilizar Express.js en proyectos reales
+
+Conectar y manipular una base de datos MySQL desde Node
+
+Implementar el patrón de diseño MVC
+
+Usar herramientas como Postman para probar endpoints
+
+Versionar correctamente el código con Git y GitHub
+
+
+📁 Estructura del proyecto (MVC)
+
+/config
+  ├── database.js
+  └── database.example.js
+/controllers
+  ├── ProductController.js
+  ├── CategoryController.js
+  ├── UserController.js
+  └── OrderController.js
+/routes
+  ├── products.js
+  ├── categories.js
+  ├── users.js
+  └── orders.js
+index.js
 
 ## Endpoint
 
@@ -78,10 +114,20 @@ GET /users/:id: Ver usuario por ID.
 
 DELETE /users/:id: Eliminar un usuario por ID.
 
-✅ Requisitos
+🧰 Tecnologías utilizadas
 
 Node.js
+
+Express.js
 
 MySQL
 
 Postman
+
+Git & GitHub
+
+
+📌 Autor
+
+Maider San Pedro Barquín
+Desarrollado como parte de una práctica para aprender y consolidar conocimientos de backend con Node.js, Express y MySQL.
