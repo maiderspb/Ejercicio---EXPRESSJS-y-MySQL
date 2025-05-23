@@ -10,7 +10,7 @@ const ProductController = {
   },
 
   getProductsWithCategories: (req, res) => {
-  const sql = `
+    const sql = `
     SELECT 
       p.id AS productId, 
       p.name AS productName, 
@@ -22,36 +22,38 @@ const ProductController = {
     LEFT JOIN categories c ON pc.category_id = c.id
   `;
 
-  db.query(sql, (err, results) => {
-    if (err) {
-      return res.status(500).send("Error al obtener productos con categorías");
-    }
-
-    const productsMap = new Map();
-
-    results.forEach((row) => {
-      const { productId, productName, price, categoryId, categoryName } = row;
-
-      if (!productsMap.has(productId)) {
-        productsMap.set(productId, {
-          id: productId,
-          name: productName,
-          price,
-          categories: [],
-        });
+    db.query(sql, (err, results) => {
+      if (err) {
+        return res
+          .status(500)
+          .send("Error al obtener productos con categorías");
       }
 
-      if (categoryId) {
-        productsMap.get(productId).categories.push({
-          id: categoryId,
-          name: categoryName,
-        });
-      }
+      const productsMap = new Map();
+
+      results.forEach((row) => {
+        const { productId, productName, price, categoryId, categoryName } = row;
+
+        if (!productsMap.has(productId)) {
+          productsMap.set(productId, {
+            id: productId,
+            name: productName,
+            price,
+            categories: [],
+          });
+        }
+
+        if (categoryId) {
+          productsMap.get(productId).categories.push({
+            id: categoryId,
+            name: categoryName,
+          });
+        }
+      });
+
+      res.json(Array.from(productsMap.values()));
     });
-
-    res.json(Array.from(productsMap.values()));
-  });
-},
+  },
 
   getById: (req, res) => {
     const { id } = req.params;
