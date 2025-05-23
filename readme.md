@@ -137,7 +137,3 @@ MySQL
 Postman
 
 Git & GitHub
-
-📌 Autor
-
-Maider San Pedro Barquín

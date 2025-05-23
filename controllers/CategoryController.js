@@ -20,7 +20,6 @@ const CategoryController = {
     });
   },
 
-
   createCategory: (req, res) => {
     const { name } = req.body;
     const sql = "INSERT INTO categories (name) VALUES (?)";

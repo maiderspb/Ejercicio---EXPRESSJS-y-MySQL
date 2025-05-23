@@ -31,13 +31,13 @@ const OrderController = {
 
   update: (req, res) => {
     const { id } = req.params;
-    const { name, email } = req.body;
+    const { user_id } = req.body;
     const sql = "UPDATE orders SET status = ? WHERE id = ?";
-    db.query(sql, [name, email, id], (err, result) => {
+    db.query(sql, [user_id], (err, result) => {
       if (err) return res.status(500).send("Error al actualizar el pedido");
       if (result.affectedRows === 0)
         return res.status(404).send("Pedido no encontrado");
-      res.json({ id, name, email });
+      res.json({ id, user_id });
     });
   },
 
